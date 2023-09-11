@@ -12,10 +12,15 @@
   <link rel="shortcut icon" href="/static/fav.png" type="image/png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <!-- Add Swiper.js library -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -42,6 +47,10 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
   <!-- =======================================================
   * Template Name: Naarayan.ai
@@ -111,26 +120,26 @@
         <div class="swiper-container overflow-y-hidden swiper-scrollbar">
           <div class="swiper-wrapper" style="display: flex;">
             <div class="swiper-slide" style="flex: 1 0 auto;">
-                <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+                <div class="filter rounded-full overflow-hidden bg-[white] flex items-center justify-center">
+                    <img src="./assets/img/andhrapradesh.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
                 </div>
             </div>
 
             <div class="swiper-slide" style="flex: 1 0 auto;">
                 <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="/assets/img/zeenews.png" alt="Zee News Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Zee News', event)">
+                    <img src="./assets/img/Arunachal_Pradesh.png" alt="Zee News Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Zee News', event)">
                 </div>
             </div>
 
             <div class="swiper-slide" style="flex: 1 0 auto;">
                 <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="/media/static/news_logos/ndtv.png" alt="NDTV India Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/NDTV India', event)">
+                    <img src="./assets/img/assam.jpeg" alt="NDTV India Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/NDTV India', event)">
                 </div>
             </div>
 
             <div class="swiper-slide" style="flex: 1 0 auto;">
                 <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="/media/static/news_logos/Indiatv.png" alt="India TV Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/India TV', event)">
+                    <img src="./assets/img/west bengal.jpeg" alt="India TV Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/India TV', event)">
                 </div>
             </div>
 
@@ -226,72 +235,72 @@
     <div id="myCarousel" class="owl-carousel owl-theme my-3">
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
         <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <img src="./assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
           <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/zee-news/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/zeenews.png" alt="Zee News" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Zee News</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/ABP-Ananda/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/abpananda.jpeg" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">ABP Ananda</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/republic-tv/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/republictv.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Republic TV</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/NDTV/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/ndtv.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">NDTV</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/times-now/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/timesnow.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Times Now</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/BBC-news/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/bbcnews.jpeg" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">BBC News</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/IndiaTV/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/indiatv.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">India TV </h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
       <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
-        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
+        <a href="/channel/CNN/" class="flex items-center space-x-2 ">
+          <img src="./assets/img/cnn.jpeg" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">CNN</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
@@ -312,30 +321,30 @@
       <div class="swiper-wrapper" style="display: flex;">
           <div class="swiper-slider" style="flex: 1 0 auto;">
               <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-                  <img src="/assets/img/lang2.jpg" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+                  <img src="./assets/img/eng.jpeg" alt="English Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
               </div>
           </div>
 
           <div class="swiper-slider" style="flex: 1 0 auto;">
             <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-                <img src="/assets/img/lang2.jpg" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+                <img src="./assets/img/bangla.png" alt="Bengali Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
             </div>
         </div>
 
         <div class="swiper-slider" style="flex: 1 0 auto;">
           <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-              <img src="/assets/img/lang3.jpg" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+              <img src="./assets/img/hindi.png" alt="Hindi Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
           </div>
       </div>
 
       <div class="swiper-slider" style="flex: 1 0 auto;">
         <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-            <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+            <img src="./assets/img/urdu.png" alt="urdu Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
         </div>
       </div>
       <div class="swiper-slider" style="flex: 1 0 auto;">
         <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-            <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+            <img src="./assets/img/tamil.png" alt=" Tamil Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
         </div>
     </div>
 
@@ -426,38 +435,68 @@
     <div class="row">
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon"><i class="bx bxl-dribbble"></i></div>
-          <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-          <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+          <div class="icon"><img src="./assets/img/sports.png" alt="Sports Image"></div>
+          <h4 class="title"><a href="">Sports</a></h4>
+          <p class="description">Unleash the Power of the Game: Where Victory and Glory Meet</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bx bx-file"></i></div>
-          <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-          <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          <div class="icon"><img src="./assets/img/medical.png" alt="Medical Image"></div>
+          <h4 class="title"><a href="">Healthcare</a></h4>
+          <p class="description">Compassion in Care, Excellence in Health</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bx bx-tachometer"></i></div>
-          <h4 class="title"><a href="">Magni Dolores</a></h4>
-          <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          <div class="icon"><img src="./assets/img/business.png" alt="Business Image"></div>
+          <h4 class="title"><a href="">Business and <br> Finance </a></h4>
+          <p class="description">Building Tomorrow's Success Today</p>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon"><i class="bx bx-world"></i></div>
-          <h4 class="title"><a href="">Nemo Enim</a></h4>
-          <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          <div class="icon"><img src="./assets/img/opinion.png" alt="Opinion Image"></div>
+          <h4 class="title"><a href="">Editorial and Opinion</a></h4>
+          <p class="description">Shaping Perspectives, Nurturing Debate</p>
         </div>
       </div>
 
-    </div>
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><img src="./assets/img/laws.png" alt="Laws Image"></div>
+          <h4 class="title"><a href=""> Crime and Laws</a></h4>
+          <p class="description">Legal Insights, Crime Updates</p>
+        </div>
+      </div>
 
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><img src="./assets/img/entertainment.png" alt="Opinion Image"></div>
+          <h4 class="title"><a href="">Entertainment</a></h4>
+          <p class="description">Lights, Camera, Entertainment!</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><img src="./assets/img/weather.png" alt="Opinion Image"></div>
+          <h4 class="title"><a href="">Weather</a></h4>
+          <p class="description">Your Daily Weather Compass</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div class="icon"><img src="./assets/img/politics.png" alt="Opinion Image"></div>
+          <h4 class="title"><a href="">Politics</a></h4>
+          <p class="description">Shaping Policy, Informing Citizens</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section><!-- End Featured Services Section -->
 
@@ -752,7 +791,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos-delay="300">
                 <div class="member">
                   <div class="member-img">
-                    <img src="/assets/img/srinjoy.jpg" class="img-fluid" alt="">
+                    <img src="./assets/img/srinjoy.jpg" class="img-fluid" alt="">
                   </div>
                   <div class="member-info">
                     <h4>Srinjoy Ghosh</h4>
@@ -1079,6 +1118,7 @@
     });
 
   </script>
+
 
 <script>
   // Data for the chart (you can replace this with your data)
