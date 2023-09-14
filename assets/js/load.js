@@ -22,10 +22,31 @@ fetch("https://vartapratikriya-api.vercel.app/articles/top_keywords", {
   }).then((response)=>{
           return response.json();
       }).then((data)=>{
+        const keyValuePairs = Object.entries(data.articles[0]);
+        keyValuePairs.sort((a, b) => b[1] - a[1]);
+        const vals = [];
+        const sortedKeys = keyValuePairs.map(pair => pair[0]).slice(0, 5);
+
+        for (const key of sortedKeys) {
+          vals.push(data.articles[0][key]);
+        }
+          var chrt = document.getElementById("trending-chart").getContext("2d");
           const container = document.getElementById('top-keywords');
-          const keyValuePairs = Object.entries(data.articles[0]);
-          keyValuePairs.sort((a, b) => b[1] - a[1]);
-          const sortedKeys = keyValuePairs.map(pair => pair[0]).slice(0, 5);
+          var chartId = new Chart(chrt, {
+            type: 'doughnut',
+            data: {
+               labels: sortedKeys,
+               datasets: [{
+               label: "online tutorial subjects",
+               data: vals,
+               backgroundColor: ['blue', 'orange', 'red', 'lightgreen', 'violet'],
+               hoverOffset: 5
+               }],
+            },
+            options: {
+               responsive: false,
+            },
+         });
           sortedKeys.forEach(keyword => {
               const div = document.createElement('div');
               div.classList.add('mb-4', 'cursor-pointer', 'hover:bg-gray-400');
