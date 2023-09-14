@@ -17,7 +17,7 @@ fetch("https://vartapratikriya-api.vercel.app/config")
   });
 
 
-fetch("https://vartapratikriya-api-rumbleftw.vercel.app/articles/top_keywords", {
+fetch("https://vartapratikriya-api.vercel.app/articles/top_keywords", {
     method: 'GET',
   }).then((response)=>{
           return response.json();
@@ -25,7 +25,7 @@ fetch("https://vartapratikriya-api-rumbleftw.vercel.app/articles/top_keywords", 
           const container = document.getElementById('top-keywords');
           const keyValuePairs = Object.entries(data.articles[0]);
           keyValuePairs.sort((a, b) => b[1] - a[1]);
-          const sortedKeys = keyValuePairs.map(pair => pair[0]);
+          const sortedKeys = keyValuePairs.map(pair => pair[0]).slice(0, 5);
           sortedKeys.forEach(keyword => {
               const div = document.createElement('div');
               div.classList.add('mb-4', 'cursor-pointer', 'hover:bg-gray-400');
