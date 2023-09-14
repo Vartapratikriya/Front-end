@@ -13,14 +13,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-  <!-- Add Swiper.js library -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
-
   <!-- Favicons -->
   <link href="./assets/img/vartalogo.jpg" rel="icon">
   <link href="./assets/img/vartalogo.jpg" rel="apple-touch-icon">
@@ -47,10 +42,7 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+<script src="./index.js"></script>
 
   <!-- =======================================================
   * Template Name: Vartapratikriya
@@ -75,9 +67,8 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#states">States</a></li>
           <li><a class="nav-link scrollto" href="#channels">Channels</a></li>
-          <li><a class="nav-link scrollto" href="trending.html">Trending Topics</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-         <!--  <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -90,7 +81,7 @@
                 </ul>
               </li>
             </ul>
-          </li> -->
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -118,28 +109,28 @@
           <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
       </div>
         <div class="swiper-container overflow-y-hidden swiper-scrollbar">
-          <div class="swiper-wrapper" style="display: flex; padding:7px">
+          <div class="swiper-wrapper" style="display: flex;">
             <div class="swiper-slide" style="flex: 1 0 auto;">
-                <div class="filter rounded-full overflow-hidden bg-[white] flex items-center justify-center">
-                    <img src="./assets/img/andhrapradesh.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+                <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
+                    <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
                 </div>
             </div>
 
             <div class="swiper-slide" style="flex: 1 0 auto;">
                 <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="./assets/img/Arunachal_Pradesh.png" alt="Zee News Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Zee News', event)">
+                    <img src="/assets/img/zeenews.png" alt="Zee News Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Zee News', event)">
                 </div>
             </div>
 
             <div class="swiper-slide" style="flex: 1 0 auto;">
                 <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="./assets/img/assam.jpeg" alt="NDTV India Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/NDTV India', event)">
+                    <img src="/media/static/news_logos/ndtv.png" alt="NDTV India Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/NDTV India', event)">
                 </div>
             </div>
 
             <div class="swiper-slide" style="flex: 1 0 auto;">
                 <div class="filter rounded-full overflow-hidden bg-[gray-300] flex items-center justify-center">
-                    <img src="./assets/img/west bengal.jpeg" alt="India TV Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/India TV', event)">
+                    <img src="/media/static/news_logos/Indiatv.png" alt="India TV Logo" class="max-w-full max-h-full object-cover rounded-full filter brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/India TV', event)">
                 </div>
             </div>
 
@@ -233,74 +224,74 @@
       <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
   </div>
     <div id="myCarousel" class="owl-carousel owl-theme my-3">
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
         <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
           <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/zee-news/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/zeenews.png" alt="Zee News" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Zee News</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/ABP-Ananda/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/abpananda.jpeg" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">ABP Ananda</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/republic-tv/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/republictv.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Republic TV</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/NDTV/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/ndtv.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">NDTV</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/times-now/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/timesnow.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Times Now</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/BBC-news/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/bbcnews.jpeg" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">BBC News</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/IndiaTV/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/indiatv.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">India TV </h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
 
-      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-gray-400">
-        <a href="/channel/CNN/" class="flex items-center space-x-2 ">
-          <img src="./assets/img/cnn.jpeg" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
-          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">CNN</h3>
+      <div class="channel bg-gray-500 shadow flex items-center p-2 lg:p-3 rounded-lg hover:bg-light-900">
+        <a href="/channel/aaj-tak/" class="flex items-center space-x-2 ">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak" class="lg:h-8 lg:w-8 h-6 w-6 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">Aaj Tak</h3>
           <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
         </a>
       </div>
@@ -321,84 +312,102 @@
       <div class="swiper-wrapper" style="display: flex;">
           <div class="swiper-slider" style="flex: 1 0 auto;">
               <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-                  <img src="./assets/img/english.png" alt="English Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+                  <img src="/assets/img/lang2.jpg" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
               </div>
           </div>
 
           <div class="swiper-slider" style="flex: 1 0 auto;">
             <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-                <img src="./assets/img/bangla.png" alt="Bengali Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+                <img src="/assets/img/lang2.jpg" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
             </div>
         </div>
 
         <div class="swiper-slider" style="flex: 1 0 auto;">
           <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-              <img src="./assets/img/hindi.png" alt="Hindi Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+              <img src="/assets/img/lang3.jpg" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
           </div>
       </div>
 
       <div class="swiper-slider" style="flex: 1 0 auto;">
-        <div class="filter overflow-hidden bg-[grau-300] flex items-center justify-center">
-            <img src="./assets/img/telugu.png" alt="telugu Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
+            <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
         </div>
       </div>
       <div class="swiper-slider" style="flex: 1 0 auto;">
         <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-            <img src="./assets/img/marathi.png" alt=" Marathi Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+            <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
         </div>
     </div>
 
     <div class="swiper-slider" style="flex: 1 0 auto;">
       <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-          <img src="./assets/img/malayalam.png" alt="Malayalam Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+          <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
       </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/kannada.png" alt="Kannada Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/gujarati.png" alt="Gujarati Logo" class="max-w-full max-h-full object-cover  " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/tamil.png" alt="Tamil Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/punjabi.png" alt="Punjabi Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/assamese.png" alt="Assamese Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/odia.png" alt="Odia Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/urdu.png" alt="Urdu Logo" class="max-w-full max-h-full object-cover" onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
 
   <div class="swiper-slider" style="flex: 1 0 auto;">
     <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-        <img src="./assets/img/sanskrit.png" alt="Sanskrit Logo" class="max-w-full max-h-full object-cover " onclick="loadStory('/story/Aaj Tak', event)">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+    </div>
+  </div>
+
+  <div class="swiper-slider" style="flex: 1 0 auto;">
+    <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+    </div>
+  </div>
+
+  <div class="swiper-slider" style="flex: 1 0 auto;">
+    <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
+    </div>
+  </div>
+
+  <div class="swiper-slider" style="flex: 1 0 auto;">
+    <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
+        <img src="/assets/img/aajtak.png" alt="Aaj Tak Logo" class="max-w-full max-h-full object-cover  brightness-50 contrast-150 grayscale-100" onclick="loadStory('/story/Aaj Tak', event)">
     </div>
   </div>
       </div>
@@ -406,6 +415,8 @@
   </div>
 </section>
 
+<!-- Test 12345-->
+<div id="categories-list"></ul>
  <!-- ======= department Section ======= -->
 <section id="department" class="department">
   <div class="container" data-aos="fade-up">
@@ -418,7 +429,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <div class="icon"><img src="./assets/img/sports.png" alt="Sports Image"></div>
-          <h4 class="title"><a href="">Sports</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Unleash the Power of the Game: Where Victory and Glory Meet</p>
         </div>
       </div>
@@ -426,7 +437,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
           <div class="icon"><img src="./assets/img/medical.png" alt="Medical Image"></div>
-          <h4 class="title"><a href="">Healthcare</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Compassion in Care, Excellence in Health</p>
         </div>
       </div>
@@ -434,7 +445,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
           <div class="icon"><img src="./assets/img/business.png" alt="Business Image"></div>
-          <h4 class="title"><a href="">Business and <br> Finance </a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Building Tomorrow's Success Today</p>
         </div>
       </div>
@@ -442,7 +453,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><img src="./assets/img/opinion.png" alt="Opinion Image"></div>
-          <h4 class="title"><a href="">Editorial and Opinion</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Shaping Perspectives, Nurturing Debate</p>
         </div>
       </div>
@@ -450,7 +461,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><img src="./assets/img/laws.png" alt="Laws Image"></div>
-          <h4 class="title"><a href=""> Crime and Laws</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Legal Insights, Crime Updates</p>
         </div>
       </div>
@@ -458,7 +469,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><img src="./assets/img/entertainment.png" alt="Opinion Image"></div>
-          <h4 class="title"><a href="">Entertainment</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Lights, Camera, Entertainment!</p>
         </div>
       </div>
@@ -466,7 +477,7 @@
       <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><img src="./assets/img/weather.png" alt="Opinion Image"></div>
-          <h4 class="title"><a href="">Weather</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Your Daily Weather Compass</p>
         </div>
       </div>
@@ -474,7 +485,7 @@
        <div class="d-flex align-items-stretch p-2">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><img src="./assets/img/politics.png" alt="Opinion Image"></div>
-          <h4 class="title"><a href="">Politics</a></h4>
+          <h4 class="title"><a href=""></a></h4>
           <p class="description">Shaping Policy, Informing Citizens</p>
         </div>
       </div>
@@ -484,70 +495,17 @@
 
  <!-- ======= trending topics Section ======= -->
 <section id="trending-topics">
-  <div class="mt-4 mb-2 mx-5 shadow-md rounded-md border border-[#000] border-opacity-100 bg-gray-200 text-[#EEEEEE] lg:h-[75%] lg:mt-6">
-    <h2 class="text-[#FF4560]  font-bold mb-4 px-4 py-2 ">Trending Topics<button id="trendingTopics" class="text-white shadow-lg rounded-full focus:outline-none">
+  <div id="top-keywords" class="mt-4 mb-2 mx-5 shadow-md rounded-md border border-[#000] border-opacity-100 bg-gray-200 text-[#EEEEEE] lg:h-[75%] lg:mt-6">
+    <h2 class="text-[#FF4560]  font-bold mb-4 px-4 py-2 ">Trending Topics<button id="trendingTopics" class="text-success shadow-lg rounded-full focus:outline-none">
         <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
     </button></h2>
-    <form method="POST" class="-mb-2" action="/topic-page/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="dXX8pGSHz1GEELDXxUYmHu3IjLyXJ8EcGErSzdiGTQI6Sqw9kVGRz14gqvQ67b0n">
-        <input type="hidden" name="topic" value="PM Modi">
-        <div class="mb-4 -mt-4 cursor-pointer hover:bg-gray-400"nclick="this.parentNode.submit()">
-            <div class="flex justify-between items-center px-4 py-1">
-                <div class="text-3xl font-bold text-black">#PM Modi</div>
-                    <i class="fa-solid fa-arrow-trend-down" style="color: #ff4560;"></i>
-                    </div>
-            <hr class="border-[#000] border-opacity-100 h-px">
-        </div>
-    </form>
-
-    <form method="POST" class="-mb-2" action="/topic-page/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="dXX8pGSHz1GEELDXxUYmHu3IjLyXJ8EcGErSzdiGTQI6Sqw9kVGRz14gqvQ67b0n">
-        <input type="hidden" name="topic" value="Pakistan">
-        <div class="mb-4 cursor-pointer hover:bg-gray-400" onclick="this.parentNode.submit()">
-            <div class="flex justify-between items-center px-4 py-1">
-                <div class=" text-2xl opacity-90 text-black font-bold">#Pakistan</div>
-                    <i class="fa-solid fa-arrow-trend-down" style="color: #ff4560;"></i>
-            </div>
-            <hr class="border-[#000] border-opacity-100 h-px">
-        </div>
-    </form>
-
-    <form method="POST" class="-mb-2" action="/topic-page/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="dXX8pGSHz1GEELDXxUYmHu3IjLyXJ8EcGErSzdiGTQI6Sqw9kVGRz14gqvQ67b0n">
-        <input type="hidden" name="topic" value="Rishi Sunak">
-        <div class="mb-4 cursor-pointer hover:bg-gray-400" onclick="this.parentNode.submit()">
-            <div class="flex justify-between items-center px-4 py-1">
-            <div class=" text-xl opacity-80 font-bold text-black ">#Rishi Sunak</div>
-                    <i class="fa-solid fa-arrow-trend-down" style="color: #ff4560;"></i>
-            </div>
-            <hr class="border-[#000] border-opacity-100 h-px ">
-        </div>
-
-    </form>
-    <form method="POST" class="-mb-2" action="/topic-page/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="dXX8pGSHz1GEELDXxUYmHu3IjLyXJ8EcGErSzdiGTQI6Sqw9kVGRz14gqvQ67b0n">
-        <input type="hidden" name="topic" value="Delhi">
-        <div class="mb-4 cursor-pointer hover:bg-gray-400" onclick="this.parentNode.submit()">
-            <div class="flex justify-between items-center px-4 py-1">
-            <div class=" text-lg opacity-70 font-bold text-black">#Delhi</div>
-                    <i class="fa-solid fa-arrow-trend-down" style="color: #ff4560;"></i>
-            </div>
-            <hr class="border-[#000] border-opacity-100 h-px">
-        </div>
-
-    </form>
-    <form method="POST" class="" action="/topic-page/">
-        <input type="hidden" name="csrfmiddlewaretoken" value="dXX8pGSHz1GEELDXxUYmHu3IjLyXJ8EcGErSzdiGTQI6Sqw9kVGRz14gqvQ67b0n">
-        <input type="hidden" name="topic" value="India@76">
-        <div class="cursor-pointer hover:bg-gray-400" onclick="this.parentNode.submit()">
-            <div class="flex justify-between items-center px-4 py-1">
-            <div class=" text-sm opacity-70 font-bold text-black">#India@76</div>
-                    <i class="fa-solid fa-arrow-trend-down" style="color: #ff4560;"></i>
-            </div>
-        </div>
-    </form>
-  </div>
 </section> <!-- =======end trending topics Section ======= -->
+
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+  <li><a tabindex="-1" href="#">Regular link</a></li>
+  <li class="disabled"><a tabindex="-1" href="#">Disabled link</a></li>
+  <li><a tabindex="-1" href="#">Another link</a></li>
+</ul>
 
  <!-- ======= charts Section ======= -->
 <section id="charts" class="charts">
@@ -625,7 +583,7 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos-delay="300">
                 <div class="member">
                   <div class="member-img">
-                    <img src="./assets/img/srinjoy.jpg" class="img-fluid" alt="">
+                    <img src="/assets/img/srinjoy.jpg" class="img-fluid" alt="">
                   </div>
                   <div class="member-info">
                     <h4>Srinjoy Ghosh</h4>
@@ -697,7 +655,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>info@tict.edu.in</p>
+              <p>putridcookies4@gmail.com</p>
             </div>
           </div>
 
@@ -714,7 +672,7 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.022337025777!2d88.47263197530066!3d22.578267879487747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02753269586b03%3A0xfbb4d0c346a81109!2sTechno%20International%20New%20Town!5e0!3m2!1sen!2sin!4v1694708880714!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
           </div>
 
           <div class="col-lg-6">
@@ -754,25 +712,29 @@
     <div class="footer-top">
       <div class="container">
         <div class="row">
+
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Vartapratikriya<span>.</span></h3>
             <p>
-              1/1, Service Rd, DG Block(Newtown), Action Area I, Newtown, Chakpachuria, New Town, West Bengal 700156 <br><br>
+              1/1, Service Rd, DG Block(Newtown) <br>
+              Action Area I, Newtown, Chakpachuria<br>
+              New Town, West Bengal 700156<br>
+              India <br><br>
               <strong>Phone:</strong> 033 2324 2050<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Email:</strong> putridcookies4@gmail.com<br>
             </p>
           </div>
+
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#states">States</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#channels">Channels</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="trending.html">Trending Topics</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#about">About</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
           </div>
-
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <div class="social-links mt-2">
@@ -792,6 +754,13 @@
       <div class="copyright">
         &copy; Copyright <strong><span>Vartapratikriya</span></strong>. All Rights Reserved
       </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/Naarayan.ai-bootstrap-business-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
   </footer><!-- End Footer -->
 
@@ -808,23 +777,21 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Bootstrap JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<!-- Owl Carousel JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-<!-- channels -->
-<script>
+  <script>
     $(document).ready(function () {
       $('#myCarousel').owlCarousel({
-        margin:10,
+        items: 4, // Number of cards shown in each slide
         loop: true, // Continuously loop the carousel
-        autoplay: true, // Auto-play the carousel
-        autoplayTimeout: 5000, // Time between slides in milliseconds (5 seconds in this example)
+        margin:10, // Space between cards
         /* nav: true, */ // Show navigation buttons
         navText: [
           "<i class='fas fa-chevron-left'></i>",
@@ -843,9 +810,9 @@
         },
       });
     });
-</script>
 
-<!-- chart -->
+  </script>
+
 <script>
   // Data for the chart (you can replace this with your data)
 const data = [
@@ -859,6 +826,7 @@ const data = [
 // Function to generate the horizontal bar chart
 function generateHorizontalBarChart() {
     const chartContainer = document.querySelector('.chart-container');
+
     data.forEach(item => {
         const bar = document.createElement('div');
         bar.classList.add('chart-bar');
@@ -875,6 +843,7 @@ function generateHorizontalBarChart() {
 
 // Call the function to generate the chart when the page loads
 window.addEventListener('load', generateHorizontalBarChart);
+
 let chart = bb.generate({
             data: {
                 columns: [
@@ -904,9 +873,9 @@ let chart = bb.generate({
 <script>
   $(document).ready(function(){
     $("#owl-carousel").owlCarousel({
-      loop: true, // Enable looping
-      autoplay: true, // Auto-play the carousel
-      autoplayTimeout: 5000, // Time between slides in milliseconds (5 seconds in this example)
+      // loop: true, // Enable looping
+      // autoplay: true, // Auto-play the carousel
+      // autoplayTimeout: 5000, // Time between slides in milliseconds (5 seconds in this example)
       responsive:{
         0:{
           items:1 // Number of items to display on different screen sizes
@@ -921,5 +890,8 @@ let chart = bb.generate({
     });
   });
 </script>
+
+<script src="./assets/js/load.js"></script>
+
 </body>
 </html>
