@@ -23,7 +23,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Scrollbar thumb color on hover */
 }
- /* Rest of your CSS styles */
 
     /* Custom styles for Swiper carousel */
     .swiper-container {
@@ -535,10 +534,10 @@ body {
       }
 
       .apexcharts-menu {
-        background: #000;
+        background: #fff;
         position: absolute;
         top: 100%;
-        border: 1px solid #000;
+        border: 1px solid #fff;
         border-radius: 3px;
         padding: 3px;
         right: 10px;
@@ -566,7 +565,7 @@ body {
 
       .apexcharts-theme-dark .apexcharts-menu {
         background: #fff;
-        color: #000
+        color: #fff;
       }
 
       @media screen and (min-width:768px) {

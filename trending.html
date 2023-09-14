@@ -7,12 +7,18 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+      <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
 
      <!-- Bootstrap CSS -->
      <script src="https://cdn.tailwindcss.com"></script>
+
+      <!-- Add Swiper.js library -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- Google Fonts -->
     <link
@@ -29,6 +35,19 @@
     <!-- Template Main CSS File -->
     <link href="./assets/css/style.css" rel="stylesheet" />
     <link href="./assets/css/trending.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
+<link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
 
     <!-- =======================================================
   * Template Name: Naarayan.ai
@@ -110,7 +129,7 @@
           </div>  <!-- first appeared-->
 
          <!-- Top channels-->
-          <div id="topicDetailTopChannels" class="rounded-xl w-full h-auto lg:px-6 text-black lg:border lg:border-[#787A91] lg:border-opacity-100 shadow-md overflow-hidden text-black">
+          <div id="topicDetailTopChannels" class="rounded-xl w-full h-auto bg-gray-200 lg:px-6 text-black border border-[#787A91] border-opacity-100 shadow-md overflow-hidden text-black">
             <div class="p-4 md:p-2 mt-auto">
               <h2 class="text-[#FF4560] flex flex-row justify-center font-bold text-sm">
                 Top Channels Covering "Pakistan"
@@ -263,7 +282,7 @@
         <!-- Live News Bulletins -->
         <div class="mt-4 mx-4 lg:mx-0 my-2 py-5" data-aos="fade-up">
           <div class="flex flex-row items-center justify-center gap-1">
-            <h1 class="text-[#ff4560] flex justify-center text-sm font-bold lg:pt-2">
+            <h1 class="text-[#ff4560] flex justify-center text-sm font-bold ">
               Live News Bulletins
             </h1>
             <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000"></i>
@@ -343,33 +362,22 @@
               </li>
             </ul>
           </div>
-          <button
-            id="loadMoreBtn"
-            class="ml-4 -mt-1 bg-transparent border-black border-gray-800 hover:bg-[#ff4560] hover:opacity-80 text-gray-800 text-[10px] font-bold py-1 px-2 rounded"
-            style="display: block"
-          >
+          <button id="loadMoreBtn" class="ml-3 -mt-0 bg-gray-800 border border-gray-300 hover:bg-[#ff4560] hover:opacity-80 text-gray-200 text-[10px] font-bold py-1 px-3 rounded" style="display: block;">
             Load More
-            <i
-              class="fa-solid fa-angles-down fa-fade"
-              style="color: #000"
-            ></i>
+            <i class="fa-solid fa-angle-down fa-beat-fade"></i>
           </button>
         </div> <!-- Live News Bulletins -->
 
         <!-- "Pakistan" Popularity Over Week -->
-        <div class="rounded-xl shadow-md mx-4 lg:mx-0  py-3" data-aos="fade-up">
+        <div class="rounded-xl overflow-hidden bg-gray-200 mx-4 py-3 my-2 border border-[#787A91] border-opacity-100 shadow-md text-[#EEEEEE]" data-aos="fade-up">
           <h2 class="text-[#FF4560] flex flex-row justify-center font-bold mb-4 px-4 py-2">
             "Pakistan" Popularity Over Week
             <button id="popularityOverWeek" class="text-black shadow-lg rounded-full focus:outline-none">
               <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
             </button>
           </h2>
-          <div id="chart" class="w-full" style="min-height: 365px">
-            <div
-              id="apexcharts1p6vk5ue"
-              class="apexcharts-canvas apexcharts1p6vk5ue apexcharts-theme-light"
-              style="width: 1168px; height: 350px"
-            >
+          <div id="chart" class="w-full flex justify-center items-center" style="min-height: 365px">
+            <div class="align-items-center">
               <svg
                 id="SvgjsSvg1451"
                 width="1168"
@@ -419,8 +427,7 @@
                       text-anchor="end"
                       dominant-baseline="auto"
                       font-size="11px"
-                      font-weight="400"
-                      fill="#f9fafb"
+                      font-weight="500"
                       class="apexcharts-text apexcharts-yaxis-label"
                       style="font-family: Helvetica, Arial, sans-serif"
                     >
@@ -435,8 +442,7 @@
                       text-anchor="end"
                       dominant-baseline="auto"
                       font-size="11px"
-                      font-weight="400"
-                      fill="#f9fafb"
+                      font-weight="500"
                       class="apexcharts-text apexcharts-yaxis-label"
                       style="font-family: Helvetica, Arial, sans-serif"
                     >
@@ -451,8 +457,7 @@
                       text-anchor="end"
                       dominant-baseline="auto"
                       font-size="11px"
-                      font-weight="400"
-                      fill="#f9fafb"
+                      font-weight="500"
                       class="apexcharts-text apexcharts-yaxis-label"
                       style="font-family: Helvetica, Arial, sans-serif"
                     >
@@ -467,8 +472,7 @@
                       text-anchor="end"
                       dominant-baseline="auto"
                       font-size="11px"
-                      font-weight="400"
-                      fill="#f9fafb"
+                      font-weight="500"
                       class="apexcharts-text apexcharts-yaxis-label"
                       style="font-family: Helvetica, Arial, sans-serif"
                     >
@@ -483,8 +487,7 @@
                       text-anchor="end"
                       dominant-baseline="auto"
                       font-size="11px"
-                      font-weight="400"
-                      fill="#f9fafb"
+                      font-weight="500"
                       class="apexcharts-text apexcharts-yaxis-label"
                       style="font-family: Helvetica, Arial, sans-serif"
                     >
@@ -499,8 +502,7 @@
                       text-anchor="end"
                       dominant-baseline="auto"
                       font-size="11px"
-                      font-weight="400"
-                      fill="#f9fafb"
+                      font-weight="500"
                       class="apexcharts-text apexcharts-yaxis-label"
                       style="font-family: Helvetica, Arial, sans-serif"
                     >
@@ -601,7 +603,7 @@
                     y1="283.348"
                     x2="0"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -612,7 +614,7 @@
                     y1="283.348"
                     x2="182.07682291666666"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -623,7 +625,7 @@
                     y1="283.348"
                     x2="364.1536458333333"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -634,7 +636,7 @@
                     y1="283.348"
                     x2="546.23046875"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -645,7 +647,7 @@
                     y1="283.348"
                     x2="728.3072916666666"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -656,7 +658,7 @@
                     y1="283.348"
                     x2="910.3841145833333"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -667,7 +669,7 @@
                     y1="283.348"
                     x2="1092.4609375"
                     y2="289.348"
-                    stroke="#e0e0e0"
+                    stroke="#000000"
                     stroke-dasharray="0"
                     stroke-linecap="butt"
                     class="apexcharts-xaxis-tick"
@@ -762,7 +764,7 @@
                       y1="282.348"
                       x2="1092.4609375"
                       y2="282.348"
-                      stroke="#4a5568"
+                      stroke="#000000"
                       stroke-dasharray="0"
                       stroke-linecap="butt"
                       class="apexcharts-gridline"
@@ -773,7 +775,7 @@
                       y1="283.348"
                       x2="1092.4609375"
                       y2="283.348"
-                      stroke="#e0e0e0"
+                      stroke="#000000"
                       stroke-dasharray="0"
                       stroke-width="1"
                       stroke-linecap="butt"
@@ -892,8 +894,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -908,8 +909,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -924,8 +924,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -940,8 +939,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -956,8 +954,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -972,8 +969,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -988,8 +984,7 @@
                         text-anchor="middle"
                         dominant-baseline="auto"
                         font-size="12px"
-                        font-weight="400"
-                        fill="#f9fafb"
+                        font-weight="500"
                         class="apexcharts-text apexcharts-xaxis-label"
                         style="font-family: Helvetica, Arial, sans-serif"
                       >
@@ -1059,7 +1054,7 @@
         </div> <!-- "Pakistan" Popularity Over Week -->
 
         <!-- Latest Videos -->
-        <div class="rounded-xl overflow-hidden mx-4 lg:mx-0 my-2 border border-[#787A91] border-opacity-100 shadow-lg text-[#EEEEEE]">
+        <div class="rounded-xl bg-gray-200 overflow-hidden mx-4 py-3 my-2 my-4 border border-[#787A91] border-opacity-100 shadow-md text-[#EEEEEE]">
           <div class="p-4 md:p-8">
             <h2
               class="text-[#FF4560] flex flex-row justify-center font-bold mb-4 px-4 py-2"
@@ -1067,7 +1062,7 @@
               Latest Videos
             </h2>
             <ul class="space-y-2 md:space-y-4">
-              <li class="flex items-center border-gray-800 border-b">
+              <li class="flex items-center py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
                 <div class="flex-shrink-0">
                   <div class="h-18 w-24">
                     <img
@@ -1094,7 +1089,7 @@
                 </div>
               </li>
 
-              <li class="flex items-center border-gray-800 border-b">
+              <li class="flex items-center py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
                 <div class="flex-shrink-0">
                   <div class="h-18 w-24">
                     <img
@@ -1120,7 +1115,7 @@
                   <p class="text-xs text-gray-800">Sept. 12, 2023, 7:43 p.m.</p>
                 </div>
               </li>
-              <li class="flex items-center border-gray-800 border-b">
+              <li class="flex items-center py-3 mb-2 flex border-gray-800 border-b">
                 <div class="flex-shrink-0">
                   <div class="h-18 w-24">
                     <img
@@ -1147,7 +1142,7 @@
                 </div>
               </li>
 
-              <li class="flex items-center border-gray-800 border-b">
+              <li class="flex items-center py-3 mb-2 flex border-gray-800 border-b">
                 <div class="flex-shrink-0">
                   <div class="h-18 w-24">
                     <img
@@ -1174,7 +1169,7 @@
                 </div>
               </li>
 
-              <li class="flex items-center border-gray-800 border-b">
+              <li class="flex items-center py-3 mb-2 flex border-gray-800 border-b">
                 <div class="flex-shrink-0">
                   <div class="h-18 w-24">
                     <img
@@ -1206,22 +1201,20 @@
         </div> <!-- Latest Videos -->
 
         <!-- Recent Fact Check -->
-        <div class="fact-check-section  rounded-xl shadow-md mx-4 lg:mx-0 my-2 overflow-hidden border border-[#787A91] border-opacity-100 my-4 text-black">
-          <h2 class="text-[#FF4560] flex flex-row justify-center font-bold mb-4 px-4 py-2">
+        <div class="fact-check-section rounded-xl bg-gray-200 shadow-md mx-4 lg:mx-0 my-2 overflow-hidden border border-[#787A91] border-opacity-100 my-4 text-black">
+          <div class="p-4 md:p-8">
+          <h2 class="text-[#FF4560] flex flex-row justify-center font-bold mb-4 px-4 py-3">
             Recent Fact Check
             <button
               id="topicFactCheck"
-              class="text-white shadow-lg rounded-full focus:outline-none"
+              class="text-black shadow-lg rounded-full focus:outline-none"
             >
               <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
             </button>
           </h2>
-          <ul id="fact-check-list" class="fact-check-list text-xs p-4">
+          <ul id="fact-check-list" class="fact-check-list text-xs space-y-2 md:space-y-4">
             <!-- Fact checks will be inserted here by JavaScript -->
-
-            <li
-              class="fact-check-item rounded-lg shadow-md mb-2 flex flex-col lg:flex-row"
-            >
+            <li class="fact-check-item py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
               <img
                 src="https://newsmobile.in/wp-content/uploads/2023/09/cover-06.png"
                 class="w-96 object-cover rounded-lg flex-grow-0 flex-shrink-0 justify-center lg:w-[20%] lg:mr-4 h-28 rounded-lg"
@@ -1245,9 +1238,7 @@
               </div>
             </li>
 
-            <li
-              class="fact-check-item rounded-lg shadow-md mb-2 flex flex-col lg:flex-row"
-            >
+            <li class="fact-check-item py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
               <img
                 src="https://www.telugupost.com/h-upload/2023/09/06/1539459-new-project-55.jpg"
                 class="w-96 object-cover rounded-lg flex-grow-0 flex-shrink-0 justify-center lg:w-[20%] lg:mr-4 h-28 rounded-lg"
@@ -1271,9 +1262,7 @@
               </div>
             </li>
 
-            <li
-              class="fact-check-item rounded-lg shadow-md mb-2 flex flex-col lg:flex-row"
-            >
+            <li class="fact-check-item py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
               <img
                 src="https://www.sochfactcheck.com/wp-content/uploads/2023/09/Capital_TV_IMF_powerprotests_main.jpg"
                 class="w-96 object-cover rounded-lg flex-grow-0 flex-shrink-0 justify-center lg:w-[20%] lg:mr-4 h-28 rounded-lg"
@@ -1297,9 +1286,7 @@
               </div>
             </li>
 
-            <li
-              class="fact-check-item rounded-lg shadow-md mb-2 flex flex-col lg:flex-row"
-            >
+            <li class="fact-check-item py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
               <img
                 src="https://www.sochfactcheck.com/wp-content/uploads/2023/08/PMYP_Germany_main.jpg"
                 class="w-96 object-cover rounded-lg flex-grow-0 flex-shrink-0 justify-center lg:w-[20%] lg:mr-4 h-28 rounded-lg"
@@ -1325,9 +1312,7 @@
               </div>
             </li>
 
-            <li
-              class="fact-check-item rounded-lg shadow-md mb-2 flex flex-col lg:flex-row"
-            >
+            <li class="fact-check-item py-3 mb-2 flex flex-col lg:flex-row border-gray-800 border-b">
               <img
                 src="https://newschecker.in/wp-content/uploads/2023/09/Thumbnail-1663.jpg"
                 class="w-96 object-cover rounded-lg flex-grow-0 flex-shrink-0 justify-center lg:w-[20%] lg:mr-4 h-28 rounded-lg"
@@ -1360,6 +1345,7 @@
               >View All Fact Checks</a
             >
           </button>
+        </div>
         </div> <!-- Recent Fact Check -->
     </main>
     <!-- End #main -->
