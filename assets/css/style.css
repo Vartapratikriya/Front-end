@@ -18,7 +18,27 @@ a {
   color: #106eea;
   text-decoration: none;
 }
+.scroll-smooth {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar {
+width: 8px; /* Adjust the width as needed */
+height: 8px;
+}
 
+::-webkit-scrollbar-track {
+background-color: #ebecec; /* Dark background color */
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #252629; /* Scrollbar thumb color */
+border-radius: 5px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background-color: #555; /* Scrollbar thumb color on hover */
+}
 a:hover {
   color: #3b8af2;
   text-decoration: none;
@@ -582,7 +602,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden;
 }
 
@@ -688,7 +708,7 @@ section {
 # Featured Services
 --------------------------------------------------------------*/
 .channel-slide{
-  display: flex;
+display: flex;
 align-items: center;
 justify-content: center;
 flex-shrink: 0;
@@ -702,7 +722,6 @@ font-size: 30px;
   position: relative;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 0 30px 0 rgba(21, 22, 24, 0.12);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
@@ -720,42 +739,6 @@ font-size: 30px;
   top: 100%;
   transition: all 0.3s;
   z-index: -1;
-}
-
-.channels .icon-box:hover::before {
-  background: #106eea;
-  top: 0;
-  border-radius: 0px;
-}
-
-.channels .icon {
-  margin-bottom: 15px;
-}
-
-.channels .icon i {
-  font-size: 48px;
-  line-height: 1;
-  color: #106eea;
-  transition: all 0.3s ease-in-out;
-}
-
-.channels .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-.channels .title a {
-  color: #111;
-}
-
-.channels .icon-box:hover .title a,
-.channels .icon-box:hover .description {
-  color: #fff;
-}
-
-.channels .icon-box:hover .icon i {
-  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -974,6 +957,8 @@ font-size: 30px;
 .services .icon-box:hover .icon {
   border-color: #106eea;
 }
+
+
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
@@ -1545,18 +1530,18 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-shrink: 0;
-width: 4.5rem;
-height: 4.5rem;
+width: 8rem;
+height: 8rem;
 margin-right: 10px;
 border-radius: 58%;
-background-color: #000;
+background-color: #ffffff;
 font-size: 30px;
 color: #000;
-border: 2px solid #FF4560;
+border: 2px solid #000000;
 }
 .swiper-container {
   width: 100%;
-  height: 90px;
+  height: 10.6rem;
   margin-top: 20px;
   background-color: transparent;
 }
@@ -1564,7 +1549,7 @@ border: 2px solid #FF4560;
   display: none;
 }
 .swiper-scrollbar::-webkit-scrollbar {
-  width: 12px; /* Set the width of the scrollbar */
+  width: 5px; /* Set the width of the scrollbar */
 }
 
 .swiper-scrollbar::-webkit-scrollbar-thumb {
@@ -1712,7 +1697,7 @@ svg { width: 100%; }
   width: 100%;
   max-width: 500px;
   margin: 20px auto;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   padding: 20px;
   box-sizing: border-box;
   max-height: 355px;
@@ -1738,31 +1723,33 @@ svg { width: 100%; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 8rem;
+  height: 8rem;
   margin-right: 10px;
-  background-color: #000;
+  background-color: #ffffff;
   font-size: 30px;
-  color: #000;
-  border: 2px solid #000;
+  color: #000000;
+  border: 2px solid #000000;
   }
 
 
 /*--------------------------------------------------------------
-# Featured Services
+# Department Services
 --------------------------------------------------------------*/
-.featured-services .icon-box {
+.department .icon-box {
   padding: 30px;
   position: relative;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  box-shadow: 0 0 20px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
+  width: 20rem;
+  height: 14rem;
 }
 
-.featured-services .icon-box::before {
+.department .icon-box::before {
   content: "";
   position: absolute;
   background: #cbe0fb;
@@ -1774,45 +1761,48 @@ svg { width: 100%; }
   z-index: -1;
 }
 
-.featured-services .icon-box:hover::before {
+.department .icon-box:hover::before {
   background: #106eea;
   top: 0;
   border-radius: 0px;
 }
 
-.featured-services .icon {
+/* .department .icon {
   margin-bottom: 15px;
 }
 
-.featured-services .icon i {
-  font-size: 48px;
+.department .icon i {
+  font-size: 20px;
   line-height: 1;
   color: #106eea;
   transition: all 0.3s ease-in-out;
 }
 
-.featured-services .title {
+.department .title {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 18px;
-}
+}*/
 
-.featured-services .title a {
+.department .title a {
   color: #111;
+  font-weight: bolder;
 }
 
-.featured-services .description {
+.department .description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
 }
 
-.featured-services .icon-box:hover .title a,
-.featured-services .icon-box:hover .description {
+.department .icon-box:hover .title a,
+.department .icon-box:hover .description{
   color: #fff;
 }
-
-.featured-services .icon-box:hover .icon i {
-  color: #fff;
+.icon-box .icon img {
+  max-width: 50px;
+  max-height: 50px;
 }
-
+/* .department .icon-box:hover .icon i {
+  color: #fff;
+} */
