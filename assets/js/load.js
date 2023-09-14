@@ -17,7 +17,7 @@ fetch("https://vartapratikriya-api.vercel.app/config")
   });
 
 
-fetch("https://vartapratikriya-api-rumbleftw.vercel.app/articles/top_keywords", {            
+fetch("https://vartapratikriya-api-rumbleftw.vercel.app/articles/top_keywords", {
     method: 'GET',
   }).then((response)=>{
           return response.json();
@@ -28,14 +28,14 @@ fetch("https://vartapratikriya-api-rumbleftw.vercel.app/articles/top_keywords", 
           const sortedKeys = keyValuePairs.map(pair => pair[0]);
           sortedKeys.forEach(keyword => {
               const div = document.createElement('div');
-              div.classList.add('mb-4', 'cursor-pointer', 'hover:bg-gray-700');
+              div.classList.add('mb-4', 'cursor-pointer', 'hover:bg-gray-400');
 
               const innerDiv = document.createElement('div');
               innerDiv.classList.add('flex', 'justify-between', 'items-center', 'px-4', 'py-1', 'opacity-70', 'font-bold', 'text-black');
               const textNode = document.createTextNode(keyword);
               innerDiv.appendChild(textNode);
               innerDiv.style.fontSize = `${data.articles[0][keyword]*2}px`;
-            
+
               const arrowNode = document.createElement('i');
               arrowNode.classList.add('fa-solid', 'fa-arrow-trend-down');
               arrowNode.setAttribute('style', 'color: #ff4560;');
