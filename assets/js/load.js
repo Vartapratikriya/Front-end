@@ -70,8 +70,8 @@ fetch("https://vartapratikriya-api.vercel.app/articles/top_keywords", {
       innerDiv.style.fontSize = `${data.articles[0][keyword] * 2}px`;
 
       const arrowNode = document.createElement("i");
-      arrowNode.classList.add("fa-solid", "fa-arrow-trend-down");
-      arrowNode.setAttribute("style", "color: #ff4560;");
+      arrowNode.classList.add("fa-solid", "fa-arrow-trend-up");
+      arrowNode.setAttribute("style", "color: #4560ff;");
       innerDiv.appendChild(arrowNode);
 
       const hr = document.createElement("hr");
