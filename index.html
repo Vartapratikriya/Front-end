@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Vartapratikriya</title>
+  <title>VartaPratikriya</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Bootstrap CSS -->
@@ -37,11 +37,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
 <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/helpers.esm.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js"></script>
 <script src="./index.js"></script>
 
   <!-- =======================================================
@@ -58,7 +58,7 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Vartapratikriya</a></h1>
+      <h1 class="logo"><a href="index.html">VartaPratikriya</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
 
@@ -68,31 +68,18 @@
           <li><a class="nav-link scrollto" href="#states">States</a></li>
           <li><a class="nav-link scrollto" href="#channels">Channels</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
+
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Welcome to <span>Vartapratikriya</span></h1>
+      <h1>Welcome to <span>VartaPratikriya</span></h1>
       <h2 style="font-weight: bolder;">Shaping Tomorrow's News Today with Intelligent Insights</h2>
       <div class="d-flex">
         <a href="#states" class="btn-get-started scrollto">Get Started</a>
@@ -102,7 +89,7 @@
 
   <main id="main">
     <!-- states section -->
-    <section id="states" class="states">
+   <!--  <section id="states" class="states">
       <div class="container" data-aos="fade-up">
         <div class="d-flex align-items-center justify-content-between bg-gray-200 py-2 px-4 mb-3">
           <h3 class="m-0">States</h3>
@@ -214,7 +201,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
  <!-- ======= channels Section ======= -->
  <section id="channels" class="channels">
@@ -477,14 +464,35 @@
   </div>
 </section> <!-- ======= end department Section ======= -->
 
- <!-- ======= trending topics Section ======= -->
-<section id="trending-topics">
-  <div id="top-keywords" class="mt-4 mb-2 mx-5 shadow-md rounded-md border border-[#000] border-opacity-100 bg-gray-200 text-[#EEEEEE] lg:h-[75%] lg:mt-6">
-    <h2 class="text-[#FF4560]  font-bold mb-4 px-4 py-2 ">Trending Topics<button id="trendingTopics" class="text-success shadow-lg rounded-full focus:outline-none">
-        <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
-    </button></h2>
-</section> <!-- =======end trending topics Section ======= -->
+<div class="container" data-aos="fade-up">
+  <div class="row">
+    <div class="col-md-6">
+        <!-- ======= trending topics Section ======= -->
+        <section id="trending-topics" class="d-flex flex-column h-200">
+          <div id="top-keywords" class="mt-4 mb-2 mx-4 py-3 my-2 shadow-md rounded-md border border-[#000] border-opacity-100 bg-gray-200 text-[#EEEEEE] lg:h-[75%] lg:mt-6">
+            <h2 class="text-[#FF4560] font-bold mb-4 px-4 py-2 flex flex-row justify-center">Trending Topics<button id="trendingTopics" class="text-success shadow-lg rounded-full focus:outline-none">
+                <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
+            </button></h2>
+        </section> <!-- =======end trending topics Section ======= -->
+    </div>
 
+    <div class="col-md-6">
+      <section id="popularity-section" class="d-flex flex-column h-100">
+        <div class="rounded-xl overflow-hidden bg-gray-200 mx-4 py-3 my-2 border border-[#787A91] border-opacity-100 shadow-md text-[#EEEEEE]">
+          <h2 class="text-[#FF4560] flex flex-row justify-center font-bold mb-4 px-4 py-2">
+            Trending Topics
+            <button id="popularityOverWeek" class="text-black shadow-lg rounded-full focus:outline-none">
+              <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
+            </button>
+          </h2>
+          <div id="chart" class="w-full flex justify-center items-center" style="min-height: 365px">
+            <div class="align-items-center">
+              <canvas id="trending-chart" aria-label="chart" height="350" width="580"></canvas>
+        </div> <!-- "Pakistan" Popularity Over Week -->
+      </section>
+    </div>
+  </div>
+</div>
 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
   <li><a tabindex="-1" href="#">Regular link</a></li>
   <li class="disabled"><a tabindex="-1" href="#">Disabled link</a></li>

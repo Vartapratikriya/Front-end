@@ -16,23 +16,43 @@ fetch("https://vartapratikriya-api.vercel.app/config")
     console.error("Error:", error);
   });
 
-fetch(
-  "https://vartapratikriya-api-rumbleftw.vercel.app/articles/top_keywords",
-  {
-    method: "GET",
-  }
-)
+fetch("https://vartapratikriya-api.vercel.app/articles/top_keywords", {
+  method: "GET",
+})
   .then((response) => {
     return response.json();
   })
   .then((data) => {
-    const container = document.getElementById("top-keywords");
     const keyValuePairs = Object.entries(data.articles[0]);
     keyValuePairs.sort((a, b) => b[1] - a[1]);
-    const sortedKeys = keyValuePairs.map((pair) => pair[0]);
+    const vals = [];
+    const sortedKeys = keyValuePairs.map((pair) => pair[0]).slice(0, 5);
+
+    for (const key of sortedKeys) {
+      vals.push(data.articles[0][key]);
+    }
+    var chrt = document.getElementById("trending-chart").getContext("2d");
+    const container = document.getElementById("top-keywords");
+    var chartId = new Chart(chrt, {
+      type: "doughnut",
+      data: {
+        labels: sortedKeys,
+        datasets: [
+          {
+            label: "online tutorial subjects",
+            data: vals,
+            backgroundColor: ["blue", "orange", "red", "lightgreen", "violet"],
+            hoverOffset: 5,
+          },
+        ],
+      },
+      options: {
+        responsive: false,
+      },
+    });
     sortedKeys.forEach((keyword) => {
       const div = document.createElement("div");
-      div.classList.add("mb-4", "cursor-pointer", "hover:bg-gray-700");
+      div.classList.add("mb-4", "cursor-pointer", "hover:bg-gray-400");
 
       const innerDiv = document.createElement("div");
       innerDiv.classList.add(
@@ -63,17 +83,6 @@ fetch(
       container.appendChild(div);
     });
   });
-
-// var url = 'https://vartapratikriya-api.vercel.app/config'
-// fetch(url)
-//   .then((resp) => resp.json())
-//   .then(function(data){
-//       // console.log('Data:',data)
-//       var option = data
-//       console.log(Object.keys(option.outlets))
-//       console.log(Object.values(option.outlets))
-
-//   })
 
 fetch("https://vartapratikriya-api.vercel.app/config")
   .then((response) => response.json())
