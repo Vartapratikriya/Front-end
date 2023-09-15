@@ -5,7 +5,7 @@ for (const [key, value] of params) {
     urlParams[key] = value;
 }
 
-fetch("http://vartapratikriya-api.vercel.app/articles/sentiment?filter_by=language")
+fetch("https://vartapratikriya-api.vercel.app/articles/sentiment?filter_by=language")
   .then((response) => response.json())
   .then((data) => {
     var chrt = document.getElementById("sentiment-chart").getContext("2d");
@@ -27,7 +27,7 @@ fetch("http://vartapratikriya-api.vercel.app/articles/sentiment?filter_by=langua
       });
   })
 
-  fetch("http://vartapratikriya-api.vercel.app/articles/categories")
+  fetch("https://vartapratikriya-api.vercel.app/articles/categories")
   .then((response) => response.json())
   .then((data) => {
     const counts = {};
