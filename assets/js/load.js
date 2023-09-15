@@ -47,7 +47,7 @@ fetch("https://vartapratikriya-api.vercel.app/articles/top_keywords", {
         ],
       },
       options: {
-        responsive: false,
+        responsive: true,
       },
     });
     sortedKeys.forEach((keyword) => {
