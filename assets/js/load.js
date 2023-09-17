@@ -1,8 +1,6 @@
 fetch("https://vartapratikriya-api.vercel.app/config")
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
-
     const titleElements = document.querySelectorAll(".department .title");
 
     titleElements.forEach((element, index) => {
@@ -13,9 +11,8 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       // Create an <a> element with the appropriate href attribute
       const categoryLink = document.createElement("a");
       categoryLink.textContent = capitalizedCategory;
-      categoryLink.href = `language.html?language=${category.toLowerCase()}`;
+      categoryLink.href = `language.html?category=${category.toLowerCase()}`;
 
-      // Replace the content of the title element with the <a> element
       element.innerHTML = ""; // Clear the existing content
       element.appendChild(categoryLink);
     });
