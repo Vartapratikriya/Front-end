@@ -9,7 +9,15 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       const category = data.categories[index];
       const capitalizedCategory =
         category.charAt(0).toUpperCase() + category.slice(1);
-      element.querySelector("a").textContent = capitalizedCategory;
+
+      // Create an <a> element with the appropriate href attribute
+      const categoryLink = document.createElement("a");
+      categoryLink.textContent = capitalizedCategory;
+      categoryLink.href = `language.html?language=${category.toLowerCase()}`;
+
+      // Replace the content of the title element with the <a> element
+      element.innerHTML = ""; // Clear the existing content
+      element.appendChild(categoryLink);
     });
   })
   .catch((error) => {
@@ -91,6 +99,36 @@ fetch("https://vartapratikriya-api.vercel.app/config")
     document.querySelectorAll(".channel h3").forEach((h3, index) => {
       h3.textContent = outlets[index] || h3.textContent;
     });
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+fetch("https://vartapratikriya-api.vercel.app/config")
+  .then((response) => response.json())
+  .then((data) => {
+    const languages = Object.values(data.outlets);
+    const languageTitleContainer = document.getElementById("language_title");
+
+    if (languageTitleContainer) {
+      languages.forEach((language) => {
+        const languageBlock = document.createElement("div");
+        languageBlock.classList.add(
+          "d-flex",
+          "align-items-stretch",
+          "p-2",
+          "language-block"
+        );
+        languageBlock.innerHTML = `
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="title"><a href="language.html?language=${language}">${language}</a></h4>
+          </div>
+        `;
+        languageTitleContainer.appendChild(languageBlock);
+      });
+
+      $(languageTitleContainer).owlCarousel({});
+    }
   })
   .catch((error) => {
     console.error("Error:", error);
