@@ -92,19 +92,7 @@ fetch("https://vartapratikriya-api.vercel.app/articles/top_keywords", {
 fetch("https://vartapratikriya-api.vercel.app/config")
   .then((response) => response.json())
   .then((data) => {
-    const outlets = Object.keys(data.outlets);
-    document.querySelectorAll(".channel h3").forEach((h3, index) => {
-      h3.textContent = outlets[index] || h3.textContent;
-    });
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
-
-fetch("https://vartapratikriya-api.vercel.app/config")
-  .then((response) => response.json())
-  .then((data) => {
-    const languages = Object.values(data.outlets);
+    const languages = Object.keys(data.outlets);
     const languageTitleContainer = document.getElementById("language_title");
 
     if (languageTitleContainer) {
@@ -125,6 +113,36 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       });
 
       $(languageTitleContainer).owlCarousel({});
+    }
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+fetch("https://vartapratikriya-api.vercel.app/config")
+  .then((response) => response.json())
+  .then((data) => {
+    const channels = Object.values(data.outlets);
+    const channelTitleContainer = document.getElementById("channel_title");
+
+    if (channelTitleContainer) {
+      channels.forEach((channel) => {
+        const channelBlock = document.createElement("div");
+        channelBlock.classList.add(
+          "d-flex",
+          "align-items-stretch",
+          "p-2",
+          "language-block"
+        );
+        channelBlock.innerHTML = `
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <h4 class="title"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">${channel}</a></h4>
+          </div>
+        `;
+        channelTitleContainer.appendChild(channelBlock);
+      });
+
+      $(channelTitleContainer).owlCarousel({});
     }
   })
   .catch((error) => {

@@ -146,6 +146,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
+    console.log(data)
     const container = document.getElementById("fact-check-list");
     data.articles.forEach((article) => {
       const listItem = document.createElement("li");
