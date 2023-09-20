@@ -87,11 +87,13 @@ fetch("https://vartapratikriya-api.vercel.app/articles/categories")
     });
   });
 
+// JS file for the language page
 fetch(
   `https://vartapratikriya-api-rumbleftw.vercel.app/articles/headlines?language=${urlParams["language"]}`
 )
   .then((response) => response.json())
   .then((data) => {
+    console.log(data);
     const container = document.getElementById("fact-check-list");
     data.articles.forEach((article) => {
       const listItem = document.createElement("li");
@@ -127,13 +129,16 @@ fetch(
       rating.innerHTML = `<strong>Sentiment:</strong> ${
         article.sentiment.label.charAt(0).toUpperCase() +
         article.sentiment.label.slice(1)
-      }`;
+      }<br>
+    <strong>FactChecker:</strong> ${
+      article.factChecker.label.charAt(0) +
+      article.factChecker.label.slice(1).toLowerCase()
+    }`;
 
       contentContainer.appendChild(heading);
       contentContainer.appendChild(claimDate);
       contentContainer.appendChild(claimant);
       contentContainer.appendChild(rating);
-
       listItem.appendChild(image);
       listItem.appendChild(contentContainer);
 
@@ -141,12 +146,13 @@ fetch(
     });
   });
 
+// JS file for the category page
 fetch(
   `https://vartapratikriya-api-rumbleftw.vercel.app/articles/categories?category=${urlParams["category"]}`
 )
   .then((response) => response.json())
   .then((data) => {
-    console.log(data)
+    console.log(data);
     const container = document.getElementById("fact-check-list");
     data.articles.forEach((article) => {
       const listItem = document.createElement("li");
@@ -182,6 +188,10 @@ fetch(
       rating.innerHTML = `<strong>Sentiment:</strong> ${
         article.sentiment.label.charAt(0).toUpperCase() +
         article.sentiment.label.slice(1)
+      }<br>
+      <strong>FactChecker:</strong> ${
+        article.factChecker.label.charAt(0) +
+        article.factChecker.label.slice(1).toLowerCase()
       }`;
 
       contentContainer.appendChild(heading);
