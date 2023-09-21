@@ -1,0 +1,25 @@
+.mapdiv
+{
+    width: 40%;
+    height: 40%;
+    position: center;
+    margin: auto;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.mapdiv path
+{
+    stroke-width: 2;
+    stroke: #000000;
+    fill: #FFFFFF;
+    transition:  0.3s ease;
+
+}
+.mapdiv path:hover
+{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    position: CENTER;
+}
