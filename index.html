@@ -42,30 +42,21 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
 <script src="./index.js"></script>
-
-  <!-- =======================================================
-  * Template Name: Vartapratikriya
-  * Updated: Jul 27 2023 with Bootstrap v5.3.1
-  * Template URL: https://bootstrapmade.com/Vartapratikriya-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">VartaPratikriya</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
-
+      <div class="header">
+        <a href="index.html" class="logo"><img src="./assets/img/vartalogo.png" alt=""></a>
+        <h1 class="logo"><a href="index.html">VartaPratikriya</a></h1>
+      </div>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#states">States</a></li>
           <li><a class="nav-link scrollto" href="#channels">Channels</a></li>
+          <li><a class="nav-link scrollto" href="#language">Languages</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -81,31 +72,32 @@
       <h1>Welcome to <span>VartaPratikriya</span></h1>
       <h2 style="font-weight: bolder;">Shaping Tomorrow's News Today with Intelligent Insights</h2>
       <div class="d-flex">
-        <a href="#states" class="btn-get-started scrollto">Get Started</a>
+        <a href="#channels" class="btn-get-started scrollto">Get Started</a>
       </div>
     </div>
   </section><!-- End Hero -->
 
   <main id="main">
 
-
+  <!-- ======= trending topics Section ======= -->
 <div class="container" data-aos="fade-up">
   <div class="row">
     <div class="col-md-6">
-        <!-- ======= trending topics Section ======= -->
+       <!-- Trending Topics  -->
         <section id="trending-topics" class="d-flex flex-column h-200">
           <div id="top-keywords" class="mt-4 mb-2 mx-4 py-3 my-2 shadow-md rounded-md border border-[#000] border-opacity-100 bg-gray-200 text-[#EEEEEE] lg:h-[75%] lg:mt-6">
             <h2 class="text-[#FF4560] font-bold mb-4 px-4 py-2 flex flex-row justify-center">Trending Topics<button id="trendingTopics" class="text-success shadow-lg rounded-full focus:outline-none">
                 <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
             </button></h2>
-        </section> <!-- =======end trending topics Section ======= -->
+        </section>
     </div>
 
+     <!-- Trending Topics by Categories -->
     <div class="col-md-6">
       <section id="popularity-section" class="d-flex flex-column h-100">
         <div class="rounded-xl overflow-hidden bg-gray-200 mx-4 py-3 my-2 border border-[#787A91] border-opacity-100 shadow-md text-[#EEEEEE]">
           <h2 class="text-[#FF4560] flex flex-row justify-center font-bold mb-4 px-4 py-2">
-            Trending Topics
+            Trending Topics by Categories
             <button id="popularityOverWeek" class="text-black shadow-lg rounded-full focus:outline-none">
               <i class="fas fa-info-circle fa-xs text-[#ff4560] p-1"></i>
             </button>
@@ -113,63 +105,51 @@
           <div id="chart" class="w-full flex justify-center items-center" style="min-height: 365px">
             <div class="align-items-center">
               <canvas id="trending-chart" aria-label="chart" height="350" width="360"></canvas>
-        </div> <!-- "Pakistan" Popularity Over Week -->
+        </div>
       </section>
     </div>
   </div>
-</div>
+</div><!-- =======end trending topics Section ======= -->
+
 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
   <li><a tabindex="-1" href="#">Regular link</a></li>
   <li class="disabled"><a tabindex="-1" href="#">Disabled link</a></li>
   <li><a tabindex="-1" href="#">Another link</a></li>
 </ul>
 
-
  <!-- ======= channels Section ======= -->
- 
  <section id="channels" class="channels">
   <div class="container" data-aos="fade-up">
-    <div class="d-flex align-items-center justify-content-between bg-gray-200 py-2 px-4 mb-3">
-      <h3 class="m-0">Channels</h3>
-      <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
+    <div class="d-flex align-items-center justify-content-between bg-gray-500 py-2 px-4 mb-3">
+      <h3 class="m-0 text-white">Channels</h3>
+      <a class="text-secondary font-weight-medium text-white" href="">View All</a>
   </div>
     <div id="channel_title" class="owl-carousel owl-theme my-3"></div>
       </div>
     </div>
 
   </div>
-</section>
-
-<!-- End channels Section -->
-
-
+</section><!-- End channels Section -->
 
 <!-- Language Section -->
 <section id="language" class="language">
   <div class="container" data-aos="fade-up">
-    <div class="container" data-aos="fade-up">
-      <div class="d-flex align-items-center justify-content-between bg-gray-200 py-2 px-4 mb-3">
-        <h3 class="m-0">Language</h3>
-        <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
+      <div class="d-flex align-items-center justify-content-between bg-gray-500 py-2 px-4 mb-3">
+        <h3 class="m-0 text-white">Language</h3>
+        <a class="text-secondary font-weight-medium text-white" href="">View All</a>
     </div>
     <div id= "language_title" class="owl-carousel owl-theme">
     </div>
     </div>
   </div>
-</section>
-
-<!-- Language Section ends -->
-
-
-
+</section><!-- Language Section ends -->
 
  <!-- ======= department Section ======= -->
 <section id="department" class="department">
   <div class="container" data-aos="fade-up">
-    <div class="container" data-aos="fade-up">
-      <div class="d-flex align-items-center justify-content-between bg-gray-200 py-2 px-4 mb-3">
-        <h3 class="m-0">Department</h3>
-        <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a>
+      <div class="d-flex align-items-center justify-content-between bg-gray-500 py-2 px-4 mb-3">
+        <h3 class="m-0 text-white">Department</h3>
+        <a class="text-secondary font-weight-medium text-white" href="">View All</a>
     </div>
     <div id="owl-carousel" class="owl-carousel owl-theme">
       <div class="d-flex align-items-stretch p-2">
@@ -498,40 +478,13 @@
   <!-- Owl Carousel JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $('#myCarousel').owlCarousel({
-        items: 4, // Number of cards shown in each slide
-        loop: true, // Continuously loop the carousel
-        margin:10, // Space between cards
-        /* nav: true, */ // Show navigation buttons
-        navText: [
-          "<i class='fas fa-chevron-left'></i>",
-          "<i class='fas fa-chevron-right'></i>",
-        ], // Custom navigation icons
-        responsive: {
-          0: {
-            items: 1, // Number of cards shown in the carousel for smaller screens
-          },
-          768: {
-            items: 2, // Number of cards shown in the carousel for medium screens
-          },
-          992: {
-            items: 4, // Number of cards shown in the carousel for large screens
-          },
-        },
-      });
-    });
-
-  </script>
-
 <!-- department -->
 <script>
   $(document).ready(function(){
     $("#owl-carousel").owlCarousel({
-      // loop: true, // Enable looping
-      // autoplay: true, // Auto-play the carousel
-      // autoplayTimeout: 5000, // Time between slides in milliseconds (5 seconds in this example)
+       loop: true, // Enable looping
+       autoplay: true, // Auto-play the carousel
+       autoplayTimeout: 5000, // Time between slides in milliseconds (5 seconds in this example)
       responsive:{
         0:{
           items:1 // Number of items to display on different screen sizes
