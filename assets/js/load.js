@@ -102,17 +102,41 @@ fetch("https://vartapratikriya-api.vercel.app/config")
           "d-flex",
           "align-items-stretch",
           "p-2",
-          "language-block"
+          "language-block",
+          'mx-1',
+          'bg-gray-800',
+          'rounded-lg',
+          'items-center',
+          'hover:bg-gray-600',
         );
         languageBlock.innerHTML = `
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="title"><a href="language.html?language=${language}">${language}</a></h4>
+        <div class="swiper-slider p-0" style="flex: 1 0 auto;">
+        <a href="language.html?language=${language}">
+          <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
+            <h4 class="title text-white">${language}</h4>
           </div>
+          </a>
+        </div>
         `;
         languageTitleContainer.appendChild(languageBlock);
       });
 
-      $(languageTitleContainer).owlCarousel({});
+      $(languageTitleContainer).owlCarousel({
+      items: 4, // Number of cards shown in each slide
+      loop: true, // Enable looping
+      autoplay: true, // Auto-play the carousel
+      autoplayTimeout: 3000, // Time between slides in milliseconds (3 seconds in this example)
+      responsive: {
+        0: {
+          items: 1, // Number of cards shown in the carousel for smaller screens
+        },
+        768: {
+          items: 2, // Number of cards shown in the carousel for medium screens
+        },
+        992: {
+          items: 4, // Number of cards shown in the carousel for large screens
+        },
+      },});
     }
   })
   .catch((error) => {
@@ -129,20 +153,42 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       channels.forEach((channel) => {
         const channelBlock = document.createElement("div");
         channelBlock.classList.add(
-          "d-flex",
-          "align-items-stretch",
-          "p-2",
-          "language-block"
+          'mx-1',
+          'flex',
+          'bg-gray-800',
+          'rounded-lg',
+          'items-center',
+          'hover:bg-gray-600',
         );
         channelBlock.innerHTML = `
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 class="title"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">${channel}</a></h4>
-          </div>
+        <div class="p-2 lg:p-3">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="flex items-center space-x-2 ">
+          <img src="/assets/img/news.jpg" alt="News" class="lg:h-8 lg:w-8 h-8 w-8 object-cover">
+          <h3 class=" leading-5 font-medium text-white flex text-[11px] whitespace-nowrap">${channel}</h3>
+          <i class="fa-regular fa-circle-dot fa-beat-fade fa-xs" style="color: #f50000;"></i>
+        </a>
+      </div>
+
         `;
         channelTitleContainer.appendChild(channelBlock);
       });
 
-      $(channelTitleContainer).owlCarousel({});
+      $(channelTitleContainer).owlCarousel({
+      items: 4, // Number of cards shown in each slide
+      loop: true, // Enable looping
+      autoplay: true, // Auto-play the carousel
+      autoplayTimeout: 3000, // Time between slides in milliseconds (3 seconds in this example)
+      responsive: {
+        0: {
+          items: 1, // Number of cards shown in the carousel for smaller screens
+        },
+        768: {
+          items: 2, // Number of cards shown in the carousel for medium screens
+        },
+        992: {
+          items: 4, // Number of cards shown in the carousel for large screens
+        },
+      },});
     }
   })
   .catch((error) => {
