@@ -13,6 +13,7 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       categoryLink.textContent = capitalizedCategory;
       categoryLink.href = `language.html?category=${category.toLowerCase()}`;
 
+      // Update the HTML content with the category link
       element.innerHTML = ""; // Clear the existing content
       element.appendChild(categoryLink);
     });
@@ -103,11 +104,11 @@ fetch("https://vartapratikriya-api.vercel.app/config")
           "align-items-stretch",
           "p-2",
           "language-block",
-          'mx-1',
-          'bg-gray-800',
-          'rounded-lg',
-          'items-center',
-          'hover:bg-gray-600',
+          "mx-1",
+          "bg-gray-800",
+          "rounded-lg",
+          "items-center",
+          "hover:bg-gray-600"
         );
         languageBlock.innerHTML = `
         <div class="swiper-slider p-0" style="flex: 1 0 auto;">
@@ -122,21 +123,22 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       });
 
       $(languageTitleContainer).owlCarousel({
-      items: 4, // Number of cards shown in each slide
-      loop: true, // Enable looping
-      autoplay: true, // Auto-play the carousel
-      autoplayTimeout: 3000, // Time between slides in milliseconds (3 seconds in this example)
-      responsive: {
-        0: {
-          items: 1, // Number of cards shown in the carousel for smaller screens
+        items: 4, // Number of cards shown in each slide
+        loop: true, // Enable looping
+        autoplay: true, // Auto-play the carousel
+        autoplayTimeout: 3000, // Time between slides in milliseconds (3 seconds in this example)
+        responsive: {
+          0: {
+            items: 1, // Number of cards shown in the carousel for smaller screens
+          },
+          768: {
+            items: 2, // Number of cards shown in the carousel for medium screens
+          },
+          992: {
+            items: 4, // Number of cards shown in the carousel for large screens
+          },
         },
-        768: {
-          items: 2, // Number of cards shown in the carousel for medium screens
-        },
-        992: {
-          items: 4, // Number of cards shown in the carousel for large screens
-        },
-      },});
+      });
     }
   })
   .catch((error) => {
@@ -153,12 +155,12 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       channels.forEach((channel) => {
         const channelBlock = document.createElement("div");
         channelBlock.classList.add(
-          'mx-1',
-          'flex',
-          'bg-gray-800',
-          'rounded-lg',
-          'items-center',
-          'hover:bg-gray-600',
+          "mx-1",
+          "flex",
+          "bg-gray-800",
+          "rounded-lg",
+          "items-center",
+          "hover:bg-gray-600"
         );
         channelBlock.innerHTML = `
         <div class="p-2 lg:p-3">
@@ -174,21 +176,22 @@ fetch("https://vartapratikriya-api.vercel.app/config")
       });
 
       $(channelTitleContainer).owlCarousel({
-      items: 4, // Number of cards shown in each slide
-      loop: true, // Enable looping
-      autoplay: true, // Auto-play the carousel
-      autoplayTimeout: 3000, // Time between slides in milliseconds (3 seconds in this example)
-      responsive: {
-        0: {
-          items: 1, // Number of cards shown in the carousel for smaller screens
+        items: 4, // Number of cards shown in each slide
+        loop: true, // Enable looping
+        autoplay: true, // Auto-play the carousel
+        autoplayTimeout: 3000, // Time between slides in milliseconds (3 seconds in this example)
+        responsive: {
+          0: {
+            items: 1, // Number of cards shown in the carousel for smaller screens
+          },
+          768: {
+            items: 2, // Number of cards shown in the carousel for medium screens
+          },
+          992: {
+            items: 4, // Number of cards shown in the carousel for large screens
+          },
         },
-        768: {
-          items: 2, // Number of cards shown in the carousel for medium screens
-        },
-        992: {
-          items: 4, // Number of cards shown in the carousel for large screens
-        },
-      },});
+      });
     }
   })
   .catch((error) => {
