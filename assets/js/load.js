@@ -114,7 +114,7 @@ fetch("https://vartapratikriya-api.vercel.app/config")
         <div class="swiper-slider p-0" style="flex: 1 0 auto;">
         <a href="language.html?language=${language}">
           <div class="filter overflow-hidden bg-[gray-300] flex items-center justify-center">
-            <h4 class="title text-white">${language}</h4>
+            <h4 class="title text-white">${language.charAt(0).toUpperCase() + language.slice(1)}</h4>
           </div>
           </a>
         </div>

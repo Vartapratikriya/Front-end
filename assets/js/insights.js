@@ -130,10 +130,7 @@ fetch(
         article.sentiment.label.charAt(0).toUpperCase() +
         article.sentiment.label.slice(1)
       }<br>
-    <strong>FactChecker:</strong> ${
-      article.factChecker.label.charAt(0) +
-      article.factChecker.label.slice(1).toLowerCase()
-    }`;
+      <strong>FactChecker:</strong>`;
 
       contentContainer.appendChild(heading);
       contentContainer.appendChild(claimDate);
